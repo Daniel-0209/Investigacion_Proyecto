@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  spring-api-container:
+    image: spring-api-image
+    container_name: spring-api-container
+    ports:
+      - "8080:8080"
+    networks: 
+      - spring-network
+
+networks:
+  spring-network:
+    driver: bridge
